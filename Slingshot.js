@@ -1,4 +1,3 @@
-
 class Slingshot{
 	constructor(body,anchor)
 	{
