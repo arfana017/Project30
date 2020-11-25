@@ -4,15 +4,15 @@ class Slingshot{
 		
 		var options={ bodyA:body,			 
 			pointB:anchor, 
-			stiffness:0.004, 
-			length:1 
+			stiffness:0.1, 
+			length:10
 			
 		}
 		
-		this.bodyA = body
 		this.pointB = anchor
 		this.launcher = Constraint.create(options)
 		World.add(world,this.launcher)
+		
 	}
 
 	attach(body){
