@@ -1,15 +1,16 @@
-
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
+
+var score = 0;
 
 function setup() {
   createCanvas(800,400);
   engine = Engine.create();
   world = engine.world;
 
-  circle = new Obj(100,200,10,10);
+  circle = new Obj(170,200,10);
 
   slingshot = new Slingshot(circle.body,{x:200,y:200});
 
@@ -67,6 +68,7 @@ function setup() {
 function draw() {
   background(190,150,225);  
 
+  text("SCORE: " + score,700,40);
 
   ground1.display();
   ground2.display();
@@ -112,6 +114,38 @@ function draw() {
 
   block31.display();
 
+  block1.score();
+  block2.score();
+  block3.score();
+  block4.score();
+  block5.score();
+  block6.score();
+  block7.score();
+  block8.score();
+  block9.score();
+  block10.score();
+  block11.score();
+  block12.score();
+  block13.score();
+  block14.score();
+  block15.score();
+  block16.score();
+  block17.score();
+  block18.score();
+  block19.score();
+  block20.score();
+  block21.score();
+  block22.score();
+  block23.score();
+  block24.score();
+  block25.score();
+  block26.score();
+  block27.score();
+  block28.score();
+  block29.score();
+  block30.score();
+  block31.score();
+
   circle.display();
 
   slingshot.display();
@@ -135,6 +169,7 @@ function keyPressed() {
 
 if(keyCode === 32) {
 
+Matter.Body.setPosition(circle.body,{x:200,y:200});
 slingshot.attach(circle.body);
 
 }
