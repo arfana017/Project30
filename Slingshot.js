@@ -9,6 +9,7 @@ class Slingshot{
 			
 		}
 		
+		this.bodyA = bodyA
 		this.pointB = anchor
 		this.launcher = Constraint.create(options)
 		World.add(world,this.launcher)
