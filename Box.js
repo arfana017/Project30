@@ -5,7 +5,7 @@ class Box {
       'friction':1.0,
       'density':0.04,
       }
-    this.visibility = 225;
+    this.Visibility = 225;
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
     this.height = height;
@@ -34,7 +34,17 @@ class Box {
       tint(255,this.Visiblity);
       pop();
     }
-
   }
+
+  score() {
+
+		if (this.Visibility < 0 && this.Visibility > -105) {
+	
+		  score++;
+	
+		}
+
+	  }
+
 
 }
